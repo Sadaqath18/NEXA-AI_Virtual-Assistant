@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  position: relative;
+  background: url("background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.image-container .image img {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.image-container h1 {
+  color: #3ac0d7;
+  font-size: 44px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+.image-container p {
+  color: #48a6b7c2;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  height: 60px;
+  border-radius: 30px;
+  background: #969494a4;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #05daff;
+  box-shadow: 0 0 5px #05fffb;
+  transition: 0.4s ease-in-out;
+  padding: 0 15px;
+}
+
+.input:hover {
+  box-shadow: 0 0 7px 4px #05fffb;
+}
+
+.talk {
+  font-size: 24px;
+  color: white;
+  margin-right: 10px;
+}
+
+.content {
+  color: #ffffff;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  min-height: 22px;
+  flex: 1;
+}
+
+#textInput {
+  display: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.text-mode {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
